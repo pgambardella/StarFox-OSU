@@ -654,7 +654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1389147488}
   m_UpdateMethod: 0
-  m_PositionUnits: 2
+  m_PositionUnits: 1
   m_Speed: 100
   m_Position: 0
 --- !u!1 &388635786
