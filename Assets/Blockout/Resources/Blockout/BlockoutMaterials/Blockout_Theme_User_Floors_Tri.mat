@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Blockout_Theme_User_Floors_Tri
   m_Shader: {fileID: 4800000, guid: a8089c39006d76944aebbd1016c83c21, type: 3}
   m_ShaderKeywords: 
@@ -31,6 +32,7 @@ Material:
     - _Gloss: 0.227
     - _Locked_Drop: 0.7
     - _Metalic: 0.087
+    - _Metallic: 0.087
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.32500002, g: 0.20901154, b: 0.2364752, a: 1}
+    - _Color: {r: 0.33667237, g: 0.4665034, b: 0.5509489, a: 1}
