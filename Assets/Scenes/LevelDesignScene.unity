@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Path: {fileID: 1389147488}
   m_UpdateMethod: 0
   m_PositionUnits: 1
-  m_Speed: 100
+  m_Speed: 60
   m_Position: 0
 --- !u!1 &388635786
 GameObject:
@@ -21249,7 +21249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Resolution: 20
   m_Appearance:
-    pathColor: {r: 0, g: 1, b: 0, a: 1}
+    pathColor: {r: 1, g: 0, b: 0.895123, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     width: 3.54
   m_Looped: 1
