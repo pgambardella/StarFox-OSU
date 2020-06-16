@@ -29,8 +29,6 @@ public class PlayerMovement : MonoBehaviour
     [Space]
 
     [Header("Particles")]
-    public ParticleSystem trail;
-    public ParticleSystem circle;
     public ParticleSystem barrel;
     public ParticleSystem stars;
 
@@ -146,15 +144,8 @@ public class PlayerMovement : MonoBehaviour
         if (state)
         {
             cameraParent.GetComponentInChildren<CinemachineImpulseSource>().GenerateImpulse();
-            trail.Play();
-            circle.Play();
+            
         }
-        else
-        {
-            trail.Stop();
-            circle.Stop();
-        }
-        trail.GetComponent<TrailRenderer>().emitting = state;
 
         float origFov = state ? 40 : 55;
         float endFov = state ? 55 : 40;
