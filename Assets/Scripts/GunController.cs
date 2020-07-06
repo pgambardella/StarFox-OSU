@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GunController : MonoBehaviour
 {
@@ -12,13 +13,22 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (m_bulletPrefab)
+            if (EventSystem.current.IsPointerOverGameObject())
             {
-                Instantiate(m_bulletPrefab, transform.position, transform.rotation * m_bulletPrefab.transform.rotation);
-            } else
-            {
-                Debug.LogError("you forgot to put the bullet prefab in the weapon: " + gameObject.name);
+                Fire();
             }
+        }
+    }
+
+    private void Fire()
+    {
+        if (m_bulletPrefab)
+        {
+            Instantiate(m_bulletPrefab, transform.position, transform.rotation * m_bulletPrefab.transform.rotation);
+        }
+        else
+        {
+            Debug.LogError("you forgot to put the bullet prefab in the weapon: " + gameObject.name);
         }
     }
 }

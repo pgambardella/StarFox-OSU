@@ -25,21 +25,30 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public event UnityAction onShowSwitchPathUI;
-    public void ShowSwitchPathUI()
+    public event UnityAction onShowAimUI;
+    public void ShowAimUI()
     {
-        if (onShowSwitchPathUI != null)
+        if (onShowAimUI != null)
         {
-            onShowSwitchPathUI();
+            onShowAimUI();
         }
     }
 
-    public event UnityAction onHideSwitchPathUI;
-    public void HideSwitchPathUI()
+    public event UnityAction onHideAimUI;
+    public void HideAimUI()
     {
-        if (onHideSwitchPathUI != null)
+        if (onHideAimUI != null)
         {
-            onHideSwitchPathUI();
+            onHideAimUI();
+        }
+    }
+
+    public event UnityAction<GameObject> onAimUIActivated;
+    public void AimUIActivated(GameObject aimObj)
+    {
+        if (onAimUIActivated != null)
+        {
+            onAimUIActivated(aimObj);
         }
     }
 }
