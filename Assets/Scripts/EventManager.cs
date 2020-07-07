@@ -51,4 +51,13 @@ public class EventManager : MonoBehaviour
             onAimUIActivated(aimObj);
         }
     }
+
+    public event UnityAction onAimUIDeactivated;
+    public void AimUIDeactivated()
+    {
+        if (onAimUIDeactivated != null)
+        {
+            onAimUIDeactivated();
+        }
+    }
 }

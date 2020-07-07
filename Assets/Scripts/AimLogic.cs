@@ -13,11 +13,13 @@ public class AimLogic : MonoBehaviour
     {
         m_aimUiObject = null;
         EventManager.instance.onAimUIActivated += OnAimUIActivated;
+        EventManager.instance.onAimUIDeactivated += OnAimUIDeactivated;
     }
 
     private void OnDestroy()
     {
         EventManager.instance.onAimUIActivated -= OnAimUIActivated;
+        EventManager.instance.onAimUIDeactivated -= OnAimUIDeactivated;
     }
 
     void Update()
@@ -26,8 +28,8 @@ public class AimLogic : MonoBehaviour
         if (m_aimUiObject != null)
         {
             //update aim position
-            Vector3 namePose = Camera.main.WorldToScreenPoint(this.transform.position);
-            m_aimUiObject.transform.position = namePose;
+            Vector3 aimPose = Camera.main.WorldToScreenPoint(this.transform.position);
+            m_aimUiObject.transform.position = aimPose;
         }
         
 
@@ -53,6 +55,11 @@ public class AimLogic : MonoBehaviour
         {
             m_aimUiObject = aimObj;
         }
+    }
+
+    void OnAimUIDeactivated()
+    {
+        m_aimUiObject.SetActive(false);
     }
 }
 

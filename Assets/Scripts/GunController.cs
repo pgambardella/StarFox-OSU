@@ -11,12 +11,10 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && EventSystem.current.IsPointerOverGameObject())
         {
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                Fire();
-            }
+            EventManager.instance.AimUIDeactivated();
+            Fire();
         }
     }
 
