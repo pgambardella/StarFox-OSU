@@ -13,7 +13,7 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && EventSystem.current.IsPointerOverGameObject())
         {
-            EventManager.instance.AimUIDeactivated();
+            //EventSystem.current.currentSelectedGameObject.SetActive(false);
             Fire();
         }
     }
