@@ -46,7 +46,7 @@ public class HomingMissile : MonoBehaviour
             m_rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, rocketTargetRotation, m_rotateSpeed));
         } else
         {
-            Debug.LogError("No enemy as target of the bullet");
+            //Debug.LogError("No enemy as target of the bullet");
         }
     }
 
