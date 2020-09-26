@@ -12,7 +12,11 @@ public class AimLogic : MonoBehaviour
 
     private void OnDestroy()
     {
-        m_aimUiObject.SetActive(false);
+        if (m_aimUiObject != null)
+        {
+            m_aimUiObject.SetActive(false);
+        }
+       
     }
 
     void Update()
